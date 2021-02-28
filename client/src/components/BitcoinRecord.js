@@ -10,7 +10,7 @@ const BitcoinRecord = () => {
 const getRecord = async (e)=>{
   try {
     const res = await fetch(
-      `http://localhost:3001/bitcoin/record`
+      `http://localhost:8080/bitcoin/record`
     );
     const data = await res.json();
     const priceList = data.prices
