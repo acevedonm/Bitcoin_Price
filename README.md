@@ -34,6 +34,7 @@ a)http://localhost:8080/bitcoin/price?year={YEAR}&mouth={MOUTH}&day={DAY}&hour={
  > Retorna el precio el bitcoin en un momento determinado, los segundos siempre estan en "00"
  > para enviar los parametros al backend utilice QueryParams
  > Me tome la libertad de setear los momentos en el formato YYY:MM:DD_HH:MM:SS porque creo es la una forma univoca de reconocer un instante en el tiempo.
+ > Si esta corriendo el servicio puede esperar un minuto y probar ingresando su fecha actual.
  
 b) http://localhost:8080/bitcoin/ 
  > Retorna el precio actual del bitcoin
