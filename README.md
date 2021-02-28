@@ -5,11 +5,13 @@
 **Debes tener instalado nodeJS para poder correr este proyecto**
 
 ***Instalacion:***
+
 Una vez clonado el repositorio deberas ejecutar el comando npm install dentro de la carpeta microservice para instalar todas las dependencias del backend.
 Tambien deberas ejecutar el comando npm install en la carpeta "client" para instalar todas las dependencias del frontend.
 
 
 ***Ejecución:***
+
 -Para poder correr el proyecto deberas ejecutar el comando npm start en backend (la carpeta microservices).
 
 *Una vez hecho esto podrias comunicarte con las rutas del backend, pero para hacerlo un poco mas interactivo te recomiendo que:*
@@ -17,8 +19,11 @@ Tambien deberas ejecutar el comando npm install en la carpeta "client" para inst
 
 
 ***Descripcion***
+
 **Para este proyecto elegi el lenguaje de programacion JavaScript.**
+
 **Backend**
+
 -El backend esta hecho en NodeJS, utilizando la libreria express para correr el servidor.
 -El microservicio que registra cada 60 segundos el precio del bitcoin fue realizado con la libreria node-cron
 -Por comodidad utilize axios como para las consultas asincronas
@@ -36,12 +41,14 @@ c)http://localhost:8080/bitcoin/record
  
  
 **Frondend**
+
 -El frontend fue desarrollado en React
 -Para agilizar los estilos utilice la libreria Boostrap
 -El frontend se encuentra corriendo en http://localhost:3000
 
 
 ***Como Comenzar***
+
 -Ejecute el comando npm start en backend y frontend (debe tener dos consolas corriendo)
 -Luego se abrira en su navegador por defecto la aplicacion frontend
 -Puede hacer click en el boton "Give me the current price" para obtener el precio actual
