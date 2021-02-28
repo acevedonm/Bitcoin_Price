@@ -33,7 +33,7 @@ app.use((req, res, next) => {
 //* * * MICROSERVICIO * * *
 
 /* ATENCION: 
-pero tenga en cuenta que si el archivo json es borrado o no existe el server fallara, 
+tenga en cuenta que si el archivo json es borrado o no existe el server fallara, 
 debido a que en el proceso el programa intentara leerlo
  */
 

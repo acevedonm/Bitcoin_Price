@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
 
     res.json(priceActual);
   });
-  //msg = `Hello ${req.query.name || "World"}`;
+
 });
 
 //Segundo endpoint
