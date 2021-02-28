@@ -42,7 +42,7 @@ c)http://localhost:8080/bitcoin/record
  > Retorna el historial de precios registrado (el archivo JSON)
  
  
-**Frondend**
+**Frontend**
 
 -El frontend fue desarrollado en React
 -Para agilizar los estilos utilice la libreria Boostrap
