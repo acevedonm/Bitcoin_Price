@@ -1,0 +1,9 @@
+/node_modules
+
+package-lock.json
+
+.eslintcache
+
+# dotenv environment variables file
+.env
+.env.test
