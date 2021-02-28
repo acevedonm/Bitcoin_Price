@@ -31,15 +31,15 @@ Tambien deberas ejecutar el comando npm install en la carpeta "client" para inst
 -El server se encuentra corriendo en http://localhost:8080 pero se puede cambiar el puerto modificando la variable PORT de entorno en el archivo .env, *por ejemplo PORT=3001*
 -El microservicio cuenta con 3 endpoint:
 a)http://localhost:8080/bitcoin/price?year={YEAR}&mouth={MOUTH}&day={DAY}&hour={HOUR}&min={MIN} 
- > )retorna el precio el bitcoin en un momento determinado, los segundos siempre estan en "00"
+ > Retorna el precio el bitcoin en un momento determinado, los segundos siempre estan en "00"
  > para enviar los parametros al backend utilice QueryParams
- > me tome la libertad de setear los momentos en el formato YYY:MM:DD_HH:MM:SS porque creo es la una forma univoca de reconocer un instante en el tiempo.
+ > Me tome la libertad de setear los momentos en el formato YYY:MM:DD_HH:MM:SS porque creo es la una forma univoca de reconocer un instante en el tiempo.
  
 b) http://localhost:8080/bitcoin/ 
- > yeara)retorna el precio actual del bitcoin
+ > Retorna el precio actual del bitcoin
  
 c)http://localhost:8080/bitcoin/record 
- > yeara)retorna el historial de precios registrado (el archivo JSON)
+ > Retorna el historial de precios registrado (el archivo JSON)
  
  
 **Frondend**
@@ -52,9 +52,13 @@ c)http://localhost:8080/bitcoin/record
 ***Como Comenzar***
 
 -Ejecute el comando npm start en backend y frontend (debe tener dos consolas corriendo)
+
 -Luego se abrira en su navegador por defecto la aplicacion frontend
+
 -Puede hacer click en el boton "Give me the current price" para obtener el precio actual
+
 -Si hace click en el boton "Get Price" la app le dara el precio correspondiente a la fecha que setee arriba. En el caso de que el programa no tenga registros en esa fecha se le notificara con un status 404
+
 -Finalmente puede hacer click en el boton "Give me the record" para obtener todos los registros, estos ultimos no estan estilizados por cuestiones de falta de tiempo.
 
 
