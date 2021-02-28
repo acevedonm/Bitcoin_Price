@@ -4,10 +4,12 @@ const fs = require("fs")
 
 
 //Primer endpoint
+//Retorna el precio actual
 router.get("/", (req, res) => {
   axios.get("https://cex.io/api/last_price/BTC/USD").then((price) => {
-    msg = `El Precio es ${price.data.lprice}`;
-    res.json({ msg });
+    const priceActual = price.data.lprice
+
+    res.json(priceActual);
   });
   //msg = `Hello ${req.query.name || "World"}`;
 });
@@ -17,11 +19,11 @@ router.get("/", (req, res) => {
 router.get("/record", (req, res) => {
   const json_prices = fs.readFileSync("src/record.json", 'utf-8')
   const prices = JSON.parse(json_prices)
-  //const json_prices = JSON.stringify(prices)
   res.json({prices})
 });
 
 //Tercer endpoint
+//Retorna el precio en un determinado momento
 router.get('/price', (req,res)=>{
   const year = req.query.year
   const mouth = req.query.mouth

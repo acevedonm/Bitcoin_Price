@@ -8,7 +8,7 @@ import Seconds from "./selectors/Seconds";
 
 const BitcoinForm = ({ getPrice }) => {
   return (
-    <div className="card card-body">
+    <div className="justify-content-center pt-3">
       <form onSubmit={getPrice}>
         <Year></Year>
         <Mouth></Mouth>

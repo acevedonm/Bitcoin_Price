@@ -1,7 +1,8 @@
 import { useState } from "react";
-import "./App.css";
 import BitcoinForm from "./components/BitcoinForm";
 import BitcoinInfo from "./components/BitcoinInfo.js";
+import BitcoinPrice from "./components/BitcoinPrice";
+import BitcoinRecord from "./components/BitcoinRecord";
 
 function App() {
   const [price, setPrice] = useState("####");
@@ -20,24 +21,28 @@ function App() {
         `http://localhost:3001/bitcoin/price?year=${yearValue}&mouth=${mouthValue}&day=${dayValue}&hour=${hourValue}&min=${minutesValue}`
       );
       const data = await res.json();
-      setPrice(data);
+      setPrice("USD " + data);
     } catch (e) {
       console.log("Error al buscar datos: ", e);
-      setPrice("Not Found")
+      setPrice("Not Found");
     }
   };
 
   return (
-    <section className="App-content">
-      <div className="container p-4">
-        <div className="row">
-          <div className="col-md-6 mx-auto">
-            <BitcoinForm getPrice={getPrice}></BitcoinForm>
-            <BitcoinInfo price={price}></BitcoinInfo>
-          </div>
+    <div className="container p-4">
+      <div className="row">
+        <div className="col-md-4" >
+          <BitcoinPrice></BitcoinPrice>
+        </div>
+        <div className="col-md-4">
+          <BitcoinForm getPrice={getPrice}></BitcoinForm>
+          <BitcoinInfo price={price}></BitcoinInfo>
+        </div>
+        <div className="col-md-4" >
+          <BitcoinRecord></BitcoinRecord>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
