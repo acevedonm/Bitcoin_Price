@@ -31,11 +31,13 @@ Tambien deberas ejecutar el comando npm install en la carpeta "client" para inst
 -El server se encuentra corriendo en http://localhost:8080 pero se puede cambiar el puerto modificando la variable PORT de entorno en el archivo .env, *por ejemplo PORT=3001*
 -El microservicio cuenta con 3 endpoint:
 a)http://localhost:8080/bitcoin/price?year={YEAR}&mouth={MOUTH}&day={DAY}&hour={HOUR}&min={MIN} 
- > yeara)retorna el precio el bitcoin en un momento determinado, los segundos siempre estan en "00"
+ > )retorna el precio el bitcoin en un momento determinado, los segundos siempre estan en "00"
  > para enviar los parametros al backend utilice QueryParams
  > me tome la libertad de setear los momentos en el formato YYY:MM:DD_HH:MM:SS porque creo es la una forma univoca de reconocer un instante en el tiempo.
+ 
 b) http://localhost:8080/bitcoin/ 
  > yeara)retorna el precio actual del bitcoin
+ 
 c)http://localhost:8080/bitcoin/record 
  > yeara)retorna el historial de precios registrado (el archivo JSON)
  
