@@ -11,7 +11,7 @@ const BitcoinRecord = () => {
 const getRecord = async (e)=>{
   try {
     const res = await fetch(
-      `http://localhost:8080/bitcoin/record`
+      `${process.env.REACT_APP_API_URL}/bitcoin/record`
     );
     const data = await res.json();
     const priceList = data.prices

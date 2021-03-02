@@ -7,7 +7,7 @@ const BitcoinPrice = () => {
 
   const getPrice = async () => {
     try {
-      const res = await fetch(`http://localhost:8080/bitcoin`);
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/bitcoin`);
       const data = await res.json();
       setPrice("USD " + data);
     } catch (e) {
