@@ -8,6 +8,9 @@
 
 Una vez clonado el repositorio deberas ejecutar el comando npm install dentro de la carpeta microservice para instalar todas las dependencias del backend.
 Tambien deberas ejecutar el comando npm install en la carpeta "client" para instalar todas las dependencias del frontend.
+Por ultimo deberas crear un archivo .env en backend y frontend:
+En backend el archivo .env debera tener unicamente la variable PORT="Puerto_Que_Quieras" (Sin comillas)
+En frontend el archivo .env debera tener unicamente la variable REACT_APP_API_URL=http://localhost:"Puerto_Que_Quieras" (sin comillas)
 
 
 ***Ejecución:***
@@ -28,7 +31,7 @@ Tambien deberas ejecutar el comando npm install en la carpeta "client" para inst
 -El microservicio que registra cada 60 segundos el precio del bitcoin fue realizado con la libreria node-cron
 -Por comodidad utilize axios como para las consultas asincronas
 -Elegi guardar el historial de precios en un archivo JSON (aunque al principio me inclinaba por utilizar una base de datos SQL, al ver que los datos iban a estar almacenados en una sola tabla, sin otras entidades con las cuales poder relacionarse, opte por una solucion un poco mas simple) el cual estara precargado con datos para agilizar las pruebas.
--El server se encuentra corriendo en http://localhost:8080 pero se puede cambiar el puerto modificando la variable PORT de entorno en el archivo .env, *por ejemplo PORT=3001* (en cuyo caso tambien deberias cambiar el puerto al que se comunica el frontend)
+-El server se encuentra corriendo en http://localhost:8080 pero se puede cambiar el puerto modificando la variable PORT de entorno en el archivo .env, *por ejemplo PORT=3001* (en cuyo caso tambien deberias cambiar el puerto al que se comunica el frontend: REACT_APP_API_URL)
 -El microservicio cuenta con 3 endpoint:
 a)http://localhost:8080/bitcoin/price?year={YEAR}&mouth={MOUTH}&day={DAY}&hour={HOUR}&min={MIN} 
  > Retorna el precio el bitcoin en un momento determinado, los segundos siempre estan en "00"
