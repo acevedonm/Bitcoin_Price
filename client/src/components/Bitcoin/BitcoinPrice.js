@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import image from "../../assets/Bitcoin.jpg"
 
 
 const BitcoinPrice = () => {
@@ -16,15 +17,14 @@ const BitcoinPrice = () => {
   };
 
   return (
-    <div className="card">
-      <div className="card-body">
-        <h4 className="card-title">Actual Price:</h4>
-
-        <span>{price}</span>
-
+    <div className="card"  style={{width: "40vh", minHeight:"60vh"}}>
+      <div className="card-body" >
+        <img className="card-img-top" src={image}></img>
         <button className="btn btn-success col-12" onClick={getPrice}>
           Give me the current price
         </button>
+        <h4 className="card-title">Actual Price:</h4>
+        <p>{price}</p>
       </div>
     </div>
   );
