@@ -15,6 +15,7 @@ const getRecord = async (e)=>{
     );
     const data = await res.json();
     const priceList = data.prices
+    console.log(priceList);
     setPrices(JSON.stringify(priceList).replace(/,/g,"\n"));
   } catch (e) {
     console.log("Error al buscar datos: ", e);
